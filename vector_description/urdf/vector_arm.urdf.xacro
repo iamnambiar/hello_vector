@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="vector">
+    
+    <xacro:include filename="$(find vector_description)/urdf/materials.xacro"/>
+    <xacro:include filename="$(find vector_description)/urdf/vector_arm_macro.xacro"/>
+    <xacro:vector_arm prefix=""/>
+</robot>

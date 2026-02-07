@@ -3,5 +3,7 @@
     
     <xacro:include filename="$(find vector_description)/urdf/materials.xacro"/>
     <xacro:include filename="$(find vector_description)/urdf/vector_arm_macro.xacro"/>
+    <xacro:include filename="$(find vector_description)/urdf/vector_arm_ros2_control.xacro"/>
     <xacro:vector_arm prefix=""/>
+    <xacro:vector_arm_ros2_control prefix=""/>
 </robot>

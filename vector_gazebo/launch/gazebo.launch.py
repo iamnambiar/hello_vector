@@ -64,6 +64,12 @@ def generate_launch_description():
         arguments=['arm_controller']
     )
 
+    gripper_controller_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=['gripper_controller']
+    )
+
     return LaunchDescription([
         set_gz_resource_path,
         robot_state_publisher_node,
@@ -72,5 +78,6 @@ def generate_launch_description():
         spawn_robot,
         joint_state_broadcaster_spawner,
         arm_controller_spawner,
+        gripper_controller_spawner,
     ])
     

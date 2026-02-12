@@ -8,6 +8,9 @@ controller_manager:
     
     arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
+    
+    gripper_controller:
+      type: position_controllers/GripperActionController
 
 arm_controller:
   ros__parameters:
@@ -25,4 +28,13 @@ arm_controller:
       - position
       - velocity
 
-# gripper_controller:
+gripper_controller:
+  ros__parameters:
+    joint: gripper
+    
+    command_interfaces:
+      - position
+    
+    state_interfaces:
+      - position
+      - velocity

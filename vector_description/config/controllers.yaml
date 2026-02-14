@@ -27,6 +27,9 @@ arm_controller:
     state_interfaces:
       - position
       - velocity
+    
+    open_loop_control: true
+    allow_nonzero_velocity_at_trajectory_end: true
 
 gripper_controller:
   ros__parameters:

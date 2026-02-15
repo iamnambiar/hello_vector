@@ -1,0 +1,21 @@
+services:
+  vector:
+    build: .
+    container_name: hello_vector
+    stdin_open: true
+    tty: true
+
+    # X11 forwarding for Gazebo/RViz GUI
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - .:/ros2_ws/src/hello_vector
+
+    # ROS2 DDS discovery and shared memory transport
+    network_mode: host
+    ipc: host
+
+    # Access to GPU and serial devices (/dev/tty*)
+    privileged: true

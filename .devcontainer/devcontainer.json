@@ -1,0 +1,17 @@
+{
+  "name": "Hello Vector",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "vector",
+  "workspaceFolder": "/ros2_ws/src/hello_vector",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-iot.vscode-ros",
+        "ms-python.python",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml"
+      ]
+    }
+  }
+}

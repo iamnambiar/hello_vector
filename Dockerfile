@@ -5,8 +5,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Build tools
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-colcon-common-extensions \
+    python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
+RUN pip install feetech-servo-sdk --break-system-packages
 # Create workspace and copy sources for rosdep
 RUN mkdir -p /ros2_ws/src
 WORKDIR /ros2_ws

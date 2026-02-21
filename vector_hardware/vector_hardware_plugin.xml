@@ -1,0 +1,8 @@
+<library path="vector_hardware">
+    <class
+        name="vector_hardware/VectorHardwareInterface"
+        type="vector_hardware::VectorHardwareInterface"
+        base_class_type="hardware_interface::SystemInterface">
+        <description>Hardware interface for Feetech STS3215 servos</description>
+    </class>
+</library>

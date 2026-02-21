@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="vector_arm_ros2_control" params="prefix">
+        <ros2_control name="vector_arm_system" type="system">
+            <hardware>
+                <plugin>vector_hardware/VectorHardwareInterface</plugin>
+                <param name="serial_port">/dev/ttyACM0</param>
+                <param name="baudrate">1000000</param>
+            </hardware>
+
+            <joint name="${prefix}shoulder_pan">
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <param name="servo_id">1</param>
+                <param name="offset">2122</param>
+                <param name="direction">1</param>
+            </joint>
+
+            <joint name="${prefix}shoulder_lift">
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <param name="servo_id">2</param>
+                <param name="offset">2067</param>
+                <param name="direction">1</param>
+            </joint>
+
+            <joint name="${prefix}elbow_flex">
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <param name="servo_id">3</param>
+                <param name="offset">2004</param>
+                <param name="direction">1</param>
+            </joint>
+
+            <joint name="${prefix}wrist_flex">
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <param name="servo_id">4</param>
+                <param name="offset">2081</param>
+                <param name="direction">1</param>
+            </joint>
+
+            <joint name="${prefix}wrist_roll">
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <param name="servo_id">5</param>
+                <param name="offset">2007</param>
+                <param name="direction">1</param>
+            </joint>
+
+            <joint name="${prefix}gripper">
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <param name="servo_id">6</param>
+                <param name="offset">2091</param>
+                <param name="direction">1</param>
+            </joint>
+        </ros2_control>
+
+    </xacro:macro>
+</robot>

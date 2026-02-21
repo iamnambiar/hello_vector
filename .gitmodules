@@ -1,0 +1,3 @@
+[submodule "vector_hardware/FTServo_Linux"]
+	path = vector_hardware/FTServo_Linux
+	url = git@github.com:iamnambiar/FTServo_Linux.git
